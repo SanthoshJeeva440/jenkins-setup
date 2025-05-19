@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: jenkins-server
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
+    envVars:
+      - key: JENKINS_OPTS
+        value: "--httpPort=8080"
